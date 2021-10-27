@@ -13,14 +13,24 @@ function ProfilePresentation(props) {
         <div className="ProfilePresentation">
             <ProfilePicture src={"https://i.pinimg.com/474x/11/d3/f2/11d3f2cb55ffbc652249f38d89fa2857--read-naruto-manga-anime-manga.jpg"}
                             alt={"icon de Naruto"}/>
-            <Pseudo pseudo={"naruto"}/>
-            <UserName userName={"Naruto-Uzumaki"}/>
-            <UserBeginingDate userDate={"10/10/2015"}/>
+
+                <div className="profilPresentationMainCtn">
+
+                    <div className="pseudoNameDateCtn">
+                        <div className="pseudoNameCtn">
+                            <Pseudo pseudo={"naruto"}/>
+                            <UserName userName={"Naruto-Uzumaki"}/>
+                        </div>
+                        <UserBeginingDate userDate={"10/10/2015"}/>
+                    </div>
+                    
             
-            <Presentation>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>
-                Donec odio. Quisque volutpat mattis eros.
-            </Presentation>
+                    <Presentation>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>
+                        Donec odio. Quisque volutpat.
+                    </Presentation>
+                </div>
+            
         </div>
     )
 }

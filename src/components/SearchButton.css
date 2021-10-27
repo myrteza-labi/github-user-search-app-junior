@@ -1,0 +1,11 @@
+.SearchButton {
+    width: 84px; 
+    min-width: 84px; 
+    height: 46px; 
+    background-color: #0079FF; 
+    font-family: 'Space Mono', monospace;
+    color: #FFF; 
+    border: none; 
+    border-radius: 10px; 
+    margin: 0 7px 0 0; 
+}

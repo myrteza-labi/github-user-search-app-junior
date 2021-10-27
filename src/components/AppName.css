@@ -1,0 +1,7 @@
+.AppName {
+    font-family: var(--title-font);
+    font-size: 26px; 
+    line-height: 40px; 
+    font-weight: 400; 
+    color: #FFF; 
+}

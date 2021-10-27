@@ -4,7 +4,10 @@ import './Icon.css';
 
 function Icon(props) {
     return (
-        <img src={props.iconSrc} alt={props.iconAlt} className="Icon" />
+        <div className="Icon">
+            <img src={props.iconSrc} alt={props.iconAlt} className="iconImage" />
+        </div>
+
     )
 }
 

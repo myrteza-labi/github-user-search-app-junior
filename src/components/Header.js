@@ -15,8 +15,10 @@ function Header(props) {
     return (
         <header className="Header">
             <AppName/>
-            <ThemeButton innerText={"LIGHT"}/>
-            <ThemeLogo src={sunLogo} alt="icon soleil"/>
+            <div className="themeSettings">
+                <ThemeButton innerText={"LIGHT"}/>
+                <ThemeLogo src={sunLogo} alt="icon soleil"/>
+            </div>
         </header>
     )
 }

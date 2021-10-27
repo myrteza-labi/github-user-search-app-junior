@@ -1,0 +1,11 @@
+.Presentation {
+    position: relative; 
+    font-size: 12px; 
+    line-height: 25px; 
+    font-weight: 400; 
+
+    color: #fff; 
+    opacity: 0.8; 
+
+    margin: 32px 0 0 0; 
+}

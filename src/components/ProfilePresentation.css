@@ -1,0 +1,23 @@
+.ProfilePresentation {
+    display: flex; 
+    flex-direction: row; 
+}
+
+.profilPresentationMainCtn {
+    display: flex; 
+    flex-direction: column; 
+    margin: 32px 0 0 20px; 
+}
+
+.pseudoNameDateCtn {
+    display: flex; 
+    flex-direction: column; 
+    margin: 0 0 0 70px; 
+
+}
+
+.pseudoNameCtn {
+    display: flex; 
+    flex-direction: column; 
+}
+

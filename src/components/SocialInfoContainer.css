@@ -1,0 +1,8 @@
+.SocialInfoContainer {
+    display: flex; 
+    flex-direction: row; 
+}
+
+.SocialInfoContainer:not(first-of-type) {
+    margin: 16px 0 0 0; 
+}
