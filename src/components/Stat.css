@@ -5,3 +5,10 @@
     max-width: 33%; 
     text-align: center; 
 }
+
+/* tablet style  */
+@media screen and (min-width: 768px){
+    .Stat {
+        text-align: left; 
+    }
+}

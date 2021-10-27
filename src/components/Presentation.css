@@ -1,5 +1,4 @@
 .Presentation {
-    position: relative; 
     font-size: 12px; 
     line-height: 25px; 
     font-weight: 400; 
@@ -8,4 +7,14 @@
     opacity: 0.8; 
 
     margin: 32px 0 0 0; 
+}
+
+
+
+/* tablet style  */
+@media screen and (min-width: 768px){
+    .Presentation {
+        font-size: 15px; 
+        line-height: 25px; 
+    }
 }

@@ -26,7 +26,7 @@ function ProfilePresentation(props) {
                     
             
                     <Presentation>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                         Donec odio. Quisque volutpat.
                     </Presentation>
                 </div>

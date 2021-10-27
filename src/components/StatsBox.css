@@ -11,3 +11,11 @@
     padding: 0 15px;
     background-color: #141D2F; 
 }
+
+/* tablet style  */
+@media screen and (min-width: 768px){
+    .StatsBox {
+        margin: 32px 0 0 0; 
+        padding: 0 32px;
+    }
+}

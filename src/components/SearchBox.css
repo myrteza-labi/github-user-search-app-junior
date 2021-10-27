@@ -11,3 +11,10 @@
 
     background-color: var( --main-bg-color-dark-theme); 
 }
+
+/* tablet style  */
+@media screen and (min-width: 768px){
+    .Searchbox {
+        height: 70px; 
+    }
+}

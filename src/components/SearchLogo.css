@@ -4,3 +4,13 @@
 
     margin: 0 0 0 16px; 
 }
+
+/* tablet style  */
+@media screen and (min-width: 768px){
+    .SearchLogo {
+        width: 24px; 
+        height: 24px; 
+    
+        margin: 0 0 0 32px; 
+    }
+}
