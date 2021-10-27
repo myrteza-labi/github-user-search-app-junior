@@ -2,11 +2,9 @@ import React from 'react'
 import './UserBeginingDate.css'; 
 
 
-function UserBeginingDate() {
+function UserBeginingDate(props) {
     return (
-        <p className="UserBeginingDate">
-            
-        </p>
+        <p className="UserBeginingDate">{props.userDate}</p>
     )
 }
 

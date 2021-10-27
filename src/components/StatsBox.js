@@ -1,11 +1,14 @@
 import React from 'react'
 import './StatsBox.css'; 
+import Stat from './Stat'; 
 
 
-function StatsBox() {
+function StatsBox(props) {
     return (
         <section className="StatsBox">
-            
+            <Stat statName="Repos" statNumber="8"/>
+            <Stat statName="Followers" statNumber="3232"/>
+            <Stat statName="following" statNumber="9"/>
         </section>
     )
 }

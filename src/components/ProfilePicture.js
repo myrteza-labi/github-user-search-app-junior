@@ -2,9 +2,9 @@ import React from 'react'
 import './ProfilePicture.css'; 
 
 
-function ProfilePicture() {
+function ProfilePicture(props) {
     return (
-        <img src="" alt="" className="ProfilePicture" />
+        <img src={props.src} alt={props.alt} className="ProfilePicture" />
     )
 }
 

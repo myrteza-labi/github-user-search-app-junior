@@ -2,9 +2,9 @@ import React from 'react'
 import './UserName.css'; 
 
 
-function UserName() {
+function UserName(props) {
     return (
-        <p className="UserName"></p>
+        <p className="UserName">{props.userName}</p>
     )
 }
 

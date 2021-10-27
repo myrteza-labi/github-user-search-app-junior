@@ -2,10 +2,10 @@ import React from 'react'
 import './Presentation.css'; 
 
 
-function Presentation() {
+function Presentation(props) {
     return (
         <p className="Presentation">
-            
+            {props.children}
         </p>
     )
 }

@@ -1,11 +1,17 @@
 import React from 'react'
 import './DevFinderApp.css'; 
+import Header from './Header'; 
+import SearchBox from './SearchBox'; 
+import ProfileBox from './ProfileBox'; 
 
 
-function DevFinderApp() {
+
+function DevFinderApp(props) {
     return (
         <div className="DevFinderApp">
-            
+            <Header/>
+            <SearchBox/>
+            <ProfileBox/>
         </div>
     )
 }

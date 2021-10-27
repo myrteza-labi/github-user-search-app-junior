@@ -2,11 +2,9 @@ import React from 'react'
 import './StatNumber.css'; 
 
 
-function StatNumber() {
+function StatNumber(props) {
     return (
-        <p className="StatNumber">
-            
-        </p>
+        <p className="StatNumber">{props.statNumber}</p>
     )
 }
 

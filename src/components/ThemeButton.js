@@ -2,10 +2,10 @@ import React from 'react'
 import './ThemeButton.css'; 
 
 
-function ThemeButton() {
+function ThemeButton(props) {
     return (
         <button className="ThemeButton">
-            
+            {props.innerText}
         </button>
     )
 }

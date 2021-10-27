@@ -2,9 +2,9 @@ import React from 'react'
 import './ThemeLogo.css'; 
 
 
-function ThemeLogo() {
+function ThemeLogo(props) {
     return (
-        <img src="" alt="" className="ThemeLogo" />
+        <img src={props.src} alt={props.alt} className="ThemeLogo" />
     )
 }
 

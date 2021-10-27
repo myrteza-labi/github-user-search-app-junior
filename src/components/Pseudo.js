@@ -2,9 +2,9 @@ import React from 'react'
 import './Pseudo.css'; 
 
 
-function Pseudo() {
+function Pseudo(props) {
     return (
-        <h2 className="Pseudo"></h2>
+        <h2 className="Pseudo">{props.pseudo}</h2>
     )
 }
 

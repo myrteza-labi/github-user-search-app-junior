@@ -2,9 +2,9 @@ import React from 'react'
 import './Icon.css'; 
 
 
-function Icon() {
+function Icon(props) {
     return (
-        <img src="" alt="" className="Icon" />
+        <img src={props.iconSrc} alt={props.iconAlt} className="Icon" />
     )
 }
 

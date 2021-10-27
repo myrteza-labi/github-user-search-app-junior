@@ -1,11 +1,14 @@
 import React from 'react'
 import './Stat.css'; 
+import StatName from './StatName'; 
+import StatNumber from './StatNumber'; 
 
 
-function Stat() {
+function Stat(props) {
     return (
         <div className="Stat">
-            
+            <StatName statName={props.statName}/>
+            <StatNumber statNumber={props.statNumber}/>
         </div>
     )
 }

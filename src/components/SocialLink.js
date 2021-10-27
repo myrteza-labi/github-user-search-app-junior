@@ -1,10 +1,10 @@
 import React from 'react'
-import './socialLink.css'; 
+import './SocialLink.css'; 
 
 
-function socialLink() {
+function socialLink(props) {
     return (
-        <a href="" className="SocialLink"></a>
+        <a href="" className="SocialLink">{props.sociaLink}</a>
     )
 }
 

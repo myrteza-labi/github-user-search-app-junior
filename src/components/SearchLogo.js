@@ -1,10 +1,11 @@
 import React from 'react'
 import './SearchLogo.css'; 
+import searchIcon from '../images/icon-search.svg'; 
 
 
-function SearchLogo() {
+function SearchLogo(props) {
     return (
-        <img src="" alt="" className="SearchLogo" />
+        <img src={searchIcon} alt={"icon loupe"} className="SearchLogo" />
     )
 }
 
