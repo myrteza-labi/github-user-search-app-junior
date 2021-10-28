@@ -14,17 +14,14 @@ function ProfilePresentation(props) {
                 <div className="profilPresentationMainCtn">
                     <div className="pseudoNameDateCtn">
                         <div className="pseudoNameCtn">
-                            <Pseudo pseudo={"naruto"}/>
-                            <UserName userName={"Naruto-Uzumaki"}/>
+                            <Pseudo name={props.name}/>
+                            <UserName login={props.login}/>
                         </div>
-                        <UserBeginingDate userDate={"10/10/2015"}/>
+                        <UserBeginingDate date={props.date}/>
                     </div>
                     
             
-                    <Presentation>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Donec odio. Quisque volutpat.
-                    </Presentation>
+                    <Presentation bio={props.bio} />
                 </div>
             
         </div>

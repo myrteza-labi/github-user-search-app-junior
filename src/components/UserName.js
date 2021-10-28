@@ -4,7 +4,7 @@ import './UserName.css';
 
 function UserName(props) {
     return (
-        <p className="UserName">{props.userName}</p>
+        <p className="UserName">{props.login}</p>
     )
 }
 

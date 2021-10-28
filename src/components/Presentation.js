@@ -5,7 +5,7 @@ import './Presentation.css';
 function Presentation(props) {
     return (
         <p className="Presentation">
-            {props.children}
+            {props.bio}
         </p>
     )
 }

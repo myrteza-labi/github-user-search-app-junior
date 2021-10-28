@@ -4,11 +4,17 @@ import Stat from './Stat';
 
 
 function StatsBox(props) {
+
+    const test = "4"; 
+    const repo = props.repo; 
+    const followers = props.followers; 
+    const following = props.following; 
+
     return (
         <section className="StatsBox StatsBoxLight">
-            <Stat statName="Repos" statNumber="8"/>
-            <Stat statName="Followers" statNumber="3232"/>
-            <Stat statName="following" statNumber="9"/>
+            <Stat statName="Repos" statNumber={repo}/>
+            <Stat statName="Followers" statNumber={followers}/>
+            <Stat statName="following" statNumber={following}/>
         </section>
     )
 }

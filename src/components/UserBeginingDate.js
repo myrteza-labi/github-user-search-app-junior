@@ -4,7 +4,7 @@ import './UserBeginingDate.css';
 
 function UserBeginingDate(props) {
     return (
-        <p className="UserBeginingDate">{props.userDate}</p>
+        <p className="UserBeginingDate">{props.date}</p>
     )
 }
 
