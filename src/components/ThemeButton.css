@@ -3,7 +3,7 @@
     line-height: 20px; 
     font-weight: 400; 
     letter-spacing: 2.5px; 
-
+    font-family: 'Space Mono', monospace;
     background-color: transparent;
     border: none; 
     margin: 0 16px 0 0; 
@@ -15,4 +15,5 @@
 
 .ThemeButtonLight {
     color: var(--light-font-color); 
+    font-weight: 700; 
 }
