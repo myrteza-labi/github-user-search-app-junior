@@ -5,6 +5,11 @@
     background-color: transparent; 
     border: none; 
     margin: 0 0 0 10px; 
+    outline: none; 
+
+    font-family: 'Space Mono', monospace;
+    color: #fff; 
+    opacity: 0.8; 
 }
 
 .Input::placeholder {
@@ -16,10 +21,22 @@
     opacity: 0.8; 
 }
 
+.Input::placeholder:focus {
+    color: red !important ; 
+}
+
+.Input select, textarea {
+    color: red; 
+}
+
+
+
 /* tablet style  */
 @media screen and (min-width: 768px){
     .Input {
         margin: 0 0 0 24px; 
+        font-size: 18px; 
+        line-height: 25px; 
     }
     .Input::placeholder {
         font-size: 18px; 

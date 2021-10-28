@@ -3,6 +3,7 @@ import './SearchBox.css';
 import SearchLogo from './SearchLogo'; 
 import Input from './Input'; 
 import SearchButton from './SearchButton';
+import ErrorText from './ErrorText'; 
 
 
 function SearchBox(props) {
@@ -10,6 +11,7 @@ function SearchBox(props) {
         <div className="Searchbox">
             <SearchLogo/>
             <Input/>
+            <ErrorText/>
             <SearchButton/>
         </div>
     )
