@@ -12,9 +12,14 @@
         margin: 24px 0 0 0; 
         padding: 40px; 
     }
+    
+}
+
+
+/* desktop style */
+@media screen and (min-width: 1440px){
     .profileBoxMainCtn{
         width: 480px; 
         margin: 0 0 0 200px; 
     }
 }
-
