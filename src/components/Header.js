@@ -16,8 +16,8 @@ function Header(props) {
         <header className="Header">
             <AppName/>
             <div className="themeSettings">
-                <ThemeButton innerText={"LIGHT"}/>
-                <ThemeLogo src={sunLogo} alt="icon soleil"/>
+                <ThemeButton innerText={"DARK"}/>
+                <ThemeLogo src={moonLogo} alt="icon soleil"/>
             </div>
         </header>
     )
