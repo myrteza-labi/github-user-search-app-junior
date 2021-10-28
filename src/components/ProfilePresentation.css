@@ -13,7 +13,6 @@
     display: flex; 
     flex-direction: column; 
     margin: 0 0 0 70px; 
-
 }
 
 .pseudoNameCtn {
@@ -28,6 +27,12 @@
     }
     .pseudoNameDateCtn {
         margin: 0 0 0 160px; 
-    
+    }
+}
+
+/* desktop style */
+@media screen and (min-width: 1440px){
+    .pseudoNameDateCtn {
+        margin: 0; 
     }
 }

@@ -11,12 +11,21 @@
 }
 
 /* tablet style  */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) and (max-width: 1440px){
     .DevFinderApp{
         justify-content: flex-start; 
         width: 768px; 
         min-height: 1024px; 
 
         padding: 0 98px; 
+    }
+}
+
+/* desktop style */
+@media screen and (min-width: 1440px){
+    .DevFinderApp{
+        width: 1440px; 
+        padding: 0 350px; 
+        min-height: 900px; 
     }
 }

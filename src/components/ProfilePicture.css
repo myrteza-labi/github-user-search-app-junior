@@ -15,3 +15,10 @@
         margin: 0; 
     }
 }
+
+/* desktop style */
+@media screen and (min-width: 1440px){
+    .ProfilePicture {
+        margin: 10px 0 0 10px; 
+    }
+}
