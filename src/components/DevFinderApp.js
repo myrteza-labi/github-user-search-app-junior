@@ -8,7 +8,7 @@ import ProfileBox from './ProfileBox';
 
 function DevFinderApp(props) {
     return (
-        <div className="DevFinderApp">
+        <div className="DevFinderApp DevFinderAppLight">
             <Header/>
             <SearchBox/>
             <ProfileBox/>

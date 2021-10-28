@@ -6,10 +6,17 @@
     justify-content: space-between; 
     align-items: center; 
     border-radius: 10px; 
-
     margin: 22px 0 0 0; 
     padding: 0 15px;
-    background-color: #141D2F; 
+}
+
+.StatsBoxDark {
+    background-color: var(--dark-app-bg-color); 
+}
+
+
+.StatsBoxLight {
+    background-color: var(--light-app-bg-color); 
 }
 
 /* tablet style  */

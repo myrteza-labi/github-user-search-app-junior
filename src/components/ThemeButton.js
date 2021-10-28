@@ -4,7 +4,7 @@ import './ThemeButton.css';
 
 function ThemeButton(props) {
     return (
-        <button className="ThemeButton">
+        <button className="ThemeButton ThemeButtonLight">
             {props.innerText}
         </button>
     )

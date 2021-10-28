@@ -3,9 +3,16 @@
     line-height: 20px; 
     font-weight: 400; 
     letter-spacing: 2.5px; 
-    color: #FFF; 
 
     background-color: transparent;
     border: none; 
     margin: 0 16px 0 0; 
+}
+
+.ThemeButtonDark {
+    color: var(--dark-font-color); 
+}
+
+.ThemeButtonLight {
+    color: var(--light-font-color); 
 }

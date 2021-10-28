@@ -7,6 +7,16 @@
     width: 375px; 
     background-color: #141D2F; 
     padding: 30px 24px 80px 24px; 
+
+}
+
+.DevFinderAppDark {
+    background-color: var(--dark-app-bg-color); 
+    color: var(--dark-font-color); 
+}
+.DevFinderAppLight {
+    background-color: var(--light-app-bg-color); 
+    color: var(--light-font-color); 
 }
 
 /* tablet style  */

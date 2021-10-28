@@ -5,7 +5,7 @@ import Stat from './Stat';
 
 function StatsBox(props) {
     return (
-        <section className="StatsBox">
+        <section className="StatsBox StatsBoxLight">
             <Stat statName="Repos" statNumber="8"/>
             <Stat statName="Followers" statNumber="3232"/>
             <Stat statName="following" statNumber="9"/>

@@ -4,7 +4,7 @@ import './StatNumber.css';
 
 function StatNumber(props) {
     return (
-        <p className="StatNumber">{props.statNumber}</p>
+        <p className="StatNumber StatNumberDark">{props.statNumber}</p>
     )
 }
 

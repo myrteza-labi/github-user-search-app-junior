@@ -6,10 +6,16 @@
     border: none; 
     margin: 0 0 0 10px; 
     outline: none; 
-
     font-family: 'Space Mono', monospace;
-    color: #fff; 
     opacity: 0.8; 
+}
+
+.InputDark {
+    color: var(--dark-font-color); 
+}
+
+.InputLight {
+    color: var(--light-font-color); 
 }
 
 .Input::placeholder {
@@ -20,6 +26,15 @@
     color: #FFF; 
     opacity: 0.8; 
 }
+
+.InputDark::placeholder {
+    color: var(--dark-font-color); 
+}
+
+.InputLight::placeholder {
+    color: var(--light-font-color); 
+}
+
 
 .Input::placeholder:focus {
     color: red !important ; 

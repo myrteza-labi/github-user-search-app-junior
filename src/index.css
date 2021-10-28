@@ -4,15 +4,27 @@
     box-sizing: border-box; 
 }
 
+:root {
+    /* dark theme */ 
+    --dark-app-bg-color: #141D2F; 
+    --dark-font-color: #FFF; 
+    --dark-app-main-color: #1E2A47; 
+
+    /* light theme */
+    --light-app-bg-color: #F6F8FF; 
+    --light-font-color: #4B6A9B; 
+    --light-app-main-color: #FEFEFE; 
+
+}
+
 body {
     height: 100vh; 
     font-family: 'Space Mono', monospace;
+    background-color: #F2F2F2; 
 }
 
 #root {
     height: 100%; 
 }
 
-:root {
-    --main-bg-color-dark-theme : #1E2A47; 
-}
+ 

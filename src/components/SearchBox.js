@@ -8,7 +8,7 @@ import ErrorText from './ErrorText';
 
 function SearchBox(props) {
     return (
-        <div className="Searchbox">
+        <div className="Searchbox SearchboxLight">
             <SearchLogo/>
             <Input/>
             <ErrorText/>

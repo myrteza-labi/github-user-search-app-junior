@@ -4,7 +4,7 @@ import './SocialLink.css';
 
 function socialLink(props) {
     return (
-        <a href="" className="SocialLink">{props.sociaLink}</a>
+        <a href="" className="SocialLink SocialLinkLight">{props.sociaLink}</a>
     )
 }
 
