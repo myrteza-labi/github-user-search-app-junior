@@ -42,13 +42,38 @@ class DevFinderApp extends React.Component{
         this.getCompagny = this.getCompagny.bind(this); 
         this.getTwitter = this.getTwitter.bind(this); 
         this.getGithub = this.getGithub.bind(this); 
-
         this.FetchData = this.FetchData.bind(this); 
+
+        this.setAllProfile = this.setAllProfile.bind(this); 
+
+
+       /* this.setData = this.setData.bind(this); */
+
+
+
+
+
+
+        /*this.handleLoad = this.handleLoad.bind(this); 
+
+        this.fectDataAdmin = this.fectDataAdmin.bind(this); */
+
+
     }
 
-     handleClick(){
+
+ /*
+    componentDidMount() {
+        window.addEventListener('load', this.handleLoad);
+     }
+    
+     componentWillUnmount() { 
+       window.removeEventListener('load', this.handleLoad)  
+     }
+
+     handleLoad(){
         
-        this.FetchData(); 
+        this.fectDataAdmin(); 
 
         this.getName(); 
         this.getLogin(); 
@@ -65,17 +90,10 @@ class DevFinderApp extends React.Component{
         this.getGithub(); 
         this.getLogin(); 
         this.getDate(); 
-
-        console.log(this.state.website)
-        console.log(this.state.repo)
-
-
      }
 
-     FetchData(){
-        let user = this.state.inputvalue; 
-
-        fetch("https://api.github.com/users/" + user)
+     fectDataAdmin(){
+        fetch("https://api.github.com/users/myrteza-labi")
         .then(response => response.json())
 
         
@@ -87,12 +105,65 @@ class DevFinderApp extends React.Component{
             })
      }
 
+     */
+
+
+
+     handleClick(){
+        
+
+
+
+        this.FetchData(); 
+
+        
+        
+
+     }
+
+
+
+     setAllProfile(){
+        this.getName(); 
+
+        this.getLogin(); 
+
+        this.getDate(); 
+
+        this.getAvatart(); 
+        this.getBio(); 
+        this.getRepo(); 
+        this.getFollowers(); 
+        this.getFollowing(); 
+        this.getLocation(); 
+        this.getCompagny(); 
+        this.getTwitter(); 
+        this.getGithub(); 
+        this.getLogin(); 
+        this.getDate(); 
+     }
+
+     async FetchData(){
+        let user = this.state.inputvalue; 
+
+         await fetch("https://api.github.com/users/" + user)
+        .then(response => response.json())
+
+        .then(data => 
+        {            
+            this.setState({
+                data : data, 
+            }, ()=> this.setAllProfile())
+        })
+     }
+
 
      handleInputChange(e){
         let value = e.target.value; 
         this.setState({
             inputvalue : value, 
         })
+        
      }
 
     
