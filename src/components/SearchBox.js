@@ -12,7 +12,7 @@ function SearchBox(props) {
             <SearchLogo/>
             <Input onChange={props.onInputChange}/>
             <ErrorText/>
-            <SearchButton/>
+            <SearchButton onClick={props.onSearchBtnClick}/>
         </div>
     )
 }

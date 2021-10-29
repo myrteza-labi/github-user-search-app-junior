@@ -3,6 +3,7 @@ import './DevFinderApp.css';
 import Header from './Header'; 
 import SearchBox from './SearchBox'; 
 import ProfileBox from './ProfileBox'; 
+import errAvatar from '../images/errorAvatar.jpeg'; 
 
 
 
@@ -29,7 +30,6 @@ class DevFinderApp extends React.Component{
 
 
         }
-        this.handleClick = this.handleClick.bind(this); 
         this.handleInputChange = this.handleInputChange.bind(this); 
         this.getName = this.getName.bind(this); 
         this.getLogin = this.getLogin.bind(this); 
@@ -43,26 +43,20 @@ class DevFinderApp extends React.Component{
         this.getTwitter = this.getTwitter.bind(this); 
         this.getGithub = this.getGithub.bind(this); 
         this.FetchData = this.FetchData.bind(this); 
-
         this.setAllProfile = this.setAllProfile.bind(this); 
+        this.handleLoad = this.handleLoad.bind(this); 
+        this.fectDataAdmin = this.fectDataAdmin.bind(this); 
+        this.handleSearchBtnClick = this.handleSearchBtnClick.bind(this); 
+
+        this.setErrorState = this.setErrorState.bind(this); 
 
 
-       /* this.setData = this.setData.bind(this); */
-
-
-
-
-
-
-        /*this.handleLoad = this.handleLoad.bind(this); 
-
-        this.fectDataAdmin = this.fectDataAdmin.bind(this); */
 
 
     }
 
 
- /*
+ 
     componentDidMount() {
         window.addEventListener('load', this.handleLoad);
      }
@@ -101,35 +95,21 @@ class DevFinderApp extends React.Component{
             {
                 this.setState({
                     data : data, 
-                })
+                }, ()=> this.setAllProfile())
             })
      }
 
-     */
-
-
-
-     handleClick(){
-        
-
-
-
+    
+     handleSearchBtnClick(){
         this.FetchData(); 
-
-        
-        
-
      }
 
 
 
      setAllProfile(){
         this.getName(); 
-
         this.getLogin(); 
-
         this.getDate(); 
-
         this.getAvatart(); 
         this.getBio(); 
         this.getRepo(); 
@@ -143,10 +123,12 @@ class DevFinderApp extends React.Component{
         this.getDate(); 
      }
 
-     async FetchData(){
+     
+
+    FetchData(){
         let user = this.state.inputvalue; 
 
-         await fetch("https://api.github.com/users/" + user)
+        fetch("https://api.github.com/users/" + user)
         .then(response => response.json())
 
         .then(data => 
@@ -155,7 +137,8 @@ class DevFinderApp extends React.Component{
                 data : data, 
             }, ()=> this.setAllProfile())
         })
-     }
+    }
+
 
 
      handleInputChange(e){
@@ -163,7 +146,6 @@ class DevFinderApp extends React.Component{
         this.setState({
             inputvalue : value, 
         })
-        
      }
 
     
@@ -174,17 +156,17 @@ class DevFinderApp extends React.Component{
         })
     }
 
-
     getAvatart(){
         let avatar = this.state.data.avatar_url; 
         this.setState({
             avatar : avatar, 
         })
     }
+
     getName(){
         let name = this.state.data.name; 
         this.setState({
-            name : name, 
+            name : name ? name : "no Name",  
         })
     }
 
@@ -198,9 +180,9 @@ class DevFinderApp extends React.Component{
         let date = this.state.data.created_at; 
         /* if there is a date show only the date and not the hours*/
         let newdate = date ? date.substring(0,10) : date; 
-            this.setState({
-                date: newdate,
-            })
+        this.setState({
+            date: newdate,
+        })
     }
 
     getBio(){
@@ -234,46 +216,48 @@ class DevFinderApp extends React.Component{
     getLocation(){
         let location = this.state.data.location;
         this.setState({
-            location : location, 
+            location : location===true? location : "No location", 
         }) 
     }
 
     getCompagny(){
         let company = this.state.data.company;
         this.setState({
-            company : company, 
+            company : company===true? company : "No company",
         }) 
     }
 
     getTwitter(){
         let twitter = this.state.data.twitter_username;
         this.setState({
-            twitter : twitter, 
+            twitter : twitter===true? twitter : "No twitter", 
         }) 
     }
 
     getGithub(){
         let github = this.state.data.html_url;
         this.setState({
-            github : github, 
+            github : github ? github : "No github", 
         }) 
+    }
+
+    setErrorState(){
+        this.setState({
+            avatar : errAvatar,
+        })
     }
 
 
 
 
     render(){
-        
-
-        
-        
-        
-
-
         return (
-            <div onClick={this.handleClick} className="DevFinderApp DevFinderAppLight">
-                <Header/>
-                <SearchBox onInputChange={this.handleInputChange}/>
+            <div className="DevFinderApp DevFinderAppLight">
+
+                <Header />
+                <SearchBox  onInputChange={this.handleInputChange}
+                            onSearchBtnClick={this.handleSearchBtnClick}/>
+
                 <ProfileBox name={this.state.name}
                             login={this.state.login}
                             date={this.state.date}

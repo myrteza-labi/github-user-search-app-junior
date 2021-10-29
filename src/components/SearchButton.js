@@ -4,7 +4,7 @@ import './SearchButton.css';
 
 function SearchButton(props) {
     return (
-        <button className="SearchButton">Search</button>
+        <button className="SearchButton" onClick={props.onClick}>Search</button>
     )
 }
 

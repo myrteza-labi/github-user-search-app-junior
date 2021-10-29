@@ -12,6 +12,10 @@ import sunLogo from '../images/icon-sun.svg';
 
 
 function Header(props) {
+
+    function test(){
+        alert('click')
+    }
     return (
         <header className="Header">
             <AppName/>
