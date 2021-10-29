@@ -19,22 +19,25 @@ function ProfileBox(props) {
     const company = props.company; 
 
     return (
-        <section className="ProfileBox ProfileBoxLight">
+        <section className={"ProfileBox " + props.theme + props.errorClassName}>
              <ProfilePicture    src={props.avatarSrc}
                                 alt={props.AvatartAlt}/>
 
             <div className="profileBoxMainCtn">
 
-                <ProfilePresentation    name={props.name}
+                <ProfilePresentation    theme={props.theme}
+                                        name={props.name}
                                         login={props.login}
                                         date={props.date}
                                         bio={props.bio}/>
 
-                <StatsBox   repo={repo} 
+                <StatsBox   theme={props.theme}
+                            repo={repo} 
                             followers={props.followers} 
                             following={props.following}/>
 
-                <Footer location={props.location}
+                <Footer theme={props.theme}
+                        location={props.location}
                         website={props.website}
                         twitter={props.twitter}
                         company={props.company}/>

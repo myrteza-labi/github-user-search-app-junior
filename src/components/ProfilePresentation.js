@@ -14,7 +14,7 @@ function ProfilePresentation(props) {
                 <div className="profilPresentationMainCtn">
                     <div className="pseudoNameDateCtn">
                         <div className="pseudoNameCtn">
-                            <Pseudo name={props.name}/>
+                            <Pseudo name={props.name} theme={props.theme}/>
                             <UserName login={props.login}/>
                         </div>
                         <UserBeginingDate date={props.date}/>

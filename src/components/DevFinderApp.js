@@ -12,7 +12,10 @@ class DevFinderApp extends React.Component{
         super(props); 
         this.state={
 
-            errorText : "ErrorText", 
+            errorText : "ErrorText ", 
+            searchStatus: " ",
+            profileBoxClssNme: "ProfileBox ", 
+            theme: "light ", 
 
             data : "pas de données", 
             status : null, 
@@ -50,17 +53,11 @@ class DevFinderApp extends React.Component{
         this.handleLoad = this.handleLoad.bind(this); 
         this.fectDataAdmin = this.fectDataAdmin.bind(this); 
         this.handleSearchBtnClick = this.handleSearchBtnClick.bind(this); 
-
         this.setErrorState = this.setErrorState.bind(this); 
-
         this.setCorrectState = this.setCorrectState.bind(this); 
 
-
-
-
-
+        this.handleThemeBtnClick = this.handleThemeBtnClick.bind(this); 
     }
-
 
  
     componentDidMount() {
@@ -110,6 +107,21 @@ class DevFinderApp extends React.Component{
         this.FetchData(); 
      }
 
+     handleThemeBtnClick(){
+
+        let theme = this.state.theme; 
+        if(theme==="light "){
+            this.setState({
+                theme : "dark ", 
+            })
+        }
+        else {
+            this.setState({
+                theme : "light ", 
+            })
+        }
+        
+     }
 
 
      setAllProfile(){
@@ -150,6 +162,7 @@ class DevFinderApp extends React.Component{
     setCorrectState(){
         this.setState({
             errorText: "ErrorText",
+            searchStatus : " ",
         })
     }
 
@@ -166,8 +179,10 @@ class DevFinderApp extends React.Component{
             twitter: null, 
             github: null, 
             company: null, 
+            bio: null, 
 
             errorText: "ErrorTextActive",
+            searchStatus : "error ", 
 
         })
     }
@@ -303,14 +318,20 @@ class DevFinderApp extends React.Component{
 
     render(){
         return (
-            <div className="DevFinderApp DevFinderAppLight">
+            <div className={"DevFinderApp " + this.state.theme}>
 
-                <Header />
+                <Header theme={this.state.theme}
+                        onThemeBtnClick={this.handleThemeBtnClick} />
+                
                 <SearchBox  onInputChange={this.handleInputChange}
                             onSearchBtnClick={this.handleSearchBtnClick}
-                            errClassName={this.state.errorText}/>
+                            errorClassName={this.state.searchStatus}
+                            theme={this.state.theme}/>
 
-                <ProfileBox name={this.state.name}
+                <ProfileBox className={this.state.profileBoxClssNme}
+                            errorClassName={this.state.searchStatus}
+                            theme={this.state.theme}
+                            name={this.state.name}
                             login={this.state.login}
                             date={this.state.date}
                             bio={this.state.bio}

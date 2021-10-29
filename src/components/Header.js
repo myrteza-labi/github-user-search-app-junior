@@ -18,11 +18,17 @@ function Header(props) {
     }
     return (
         <header className="Header">
-            <AppName/>
+
+            <AppName theme={props.theme}/>
+
             <div className="themeSettings">
-                <ThemeButton innerText={"DARK"}/>
-                <ThemeLogo src={moonLogo} alt="icon soleil"/>
+                <ThemeButton theme={props.theme} innerText={"DARK"} 
+                             onClick={props.onThemeBtnClick}/>
+
+                <ThemeLogo  src={props.theme==="light "? moonLogo : sunLogo} 
+                            alt={"icon " + props.theme==="light "? "moon" : "sun"}/>
             </div>
+
         </header>
     )
 }

@@ -4,8 +4,8 @@ import './ThemeButton.css';
 
 function ThemeButton(props) {
     return (
-        <button className="ThemeButton ThemeButtonLight">
-            {props.innerText}
+        <button className={"ThemeButton " + props.theme } onClick={props.onClick}>
+            {props.theme == "light " ? "DARK": "LIGHT"}
         </button>
     )
 }

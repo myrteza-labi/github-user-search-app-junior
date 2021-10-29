@@ -3,7 +3,7 @@ import './ErrorText.css';
 
 function ErrorText(props) {
     return (
-        <p className={props.className}>
+        <p className={"ErrorText " + props.errorClassName}>
             No result
         </p>
     )

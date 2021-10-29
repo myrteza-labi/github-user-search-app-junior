@@ -4,7 +4,7 @@ import './Input.css';
 
 function Input(props) {
     return (
-        <input onChange={props.onChange} type="text" className="Input InputLight" placeholder="Search username" />
+        <input onChange={props.onChange} type="text" className={"Input InputLight " + props.theme} placeholder="Search username" />
     )
 }
 

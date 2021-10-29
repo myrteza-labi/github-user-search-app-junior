@@ -8,11 +8,11 @@
     margin: 35px 0 0 0; 
     border-radius: 15px; 
 }
-.SearchboxDark {
+.Searchbox.dark {
     background-color: var( --dark-app-main-color); 
 }
 
-.SearchboxLight {
+.Searchbox.light {
     background-color: var( --light-app-main-color); 
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }

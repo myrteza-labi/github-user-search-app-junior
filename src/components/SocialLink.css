@@ -9,16 +9,18 @@
 
 }
 
-.SocialLinkDark {
+.SocialLink.light {
+    color: var(--light-font-color); 
+}
+
+
+.SocialLink.dark {
     color: var(--dark-font-color); 
 }
 
-.SocialLinkLight {
-    color: var(--light-font-color); 
-}
+
 .SocialLink:hover {
     text-decoration: underline; 
-    
 }
 
 

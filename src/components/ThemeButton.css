@@ -9,11 +9,11 @@
     margin: 0 16px 0 0; 
 }
 
-.ThemeButtonDark {
+.ThemeButton.dark {
     color: var(--dark-font-color); 
 }
 
-.ThemeButtonLight {
+.ThemeButton.light {
     color: var(--light-font-color); 
     font-weight: 700; 
 }

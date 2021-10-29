@@ -18,10 +18,10 @@ function Footer(props) {
     
     return (
         <footer className="Footer">
-            <SocialInfoContainer sociaLink={location} iconSrc={locationIcon} iconAtl={"icon position ou location"}/>
-            <SocialInfoContainer sociaLink={website} iconSrc={websiteIcon} iconAtl={"icon twitter"}/>
-            <SocialInfoContainer sociaLink={twitter} iconSrc={twitterIcon} iconAtl={"icon lien site web"}/>
-            <SocialInfoContainer sociaLink={company} iconSrc={compagnyIcon} iconAtl={"icon de compagnie"}/>
+            <SocialInfoContainer theme={props.theme} sociaLink={location} iconSrc={locationIcon} iconAtl={"icon position ou location"}/>
+            <SocialInfoContainer theme={props.theme} sociaLink={website} iconSrc={websiteIcon} iconAtl={"icon twitter"}/>
+            <SocialInfoContainer theme={props.theme} sociaLink={twitter} iconSrc={twitterIcon} iconAtl={"icon lien site web"}/>
+            <SocialInfoContainer theme={props.theme} sociaLink={company} iconSrc={compagnyIcon} iconAtl={"icon de compagnie"}/>
         </footer>
     )
 }

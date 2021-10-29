@@ -4,6 +4,10 @@
     font-weight: 400; 
 }
 
+.Pseudo.light {
+    color: #2B3442; 
+}
+
 /* tablet style  */
 @media screen and (min-width: 768px){
     .Pseudo {

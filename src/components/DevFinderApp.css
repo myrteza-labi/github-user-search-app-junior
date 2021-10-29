@@ -10,14 +10,19 @@
 
 }
 
-.DevFinderAppDark {
-    background-color: var(--dark-app-bg-color); 
-    color: var(--dark-font-color); 
-}
-.DevFinderAppLight {
+.DevFinderApp.light{
     background-color: var(--light-app-bg-color); 
     color: var(--light-font-color); 
 }
+
+
+
+.DevFinderApp.dark {
+    background-color: var(--dark-app-bg-color); 
+    color: var(--dark-font-color); 
+}
+
+
 
 /* tablet style  */
 @media screen and (min-width: 768px) and (max-width: 1440px){

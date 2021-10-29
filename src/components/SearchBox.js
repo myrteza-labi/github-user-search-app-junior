@@ -8,10 +8,10 @@ import ErrorText from './ErrorText';
 
 function SearchBox(props) {
     return (
-        <div className="Searchbox SearchboxLight">
+        <div className={"Searchbox "+ props.theme}>
             <SearchLogo/>
-            <Input onChange={props.onInputChange}/>
-            <ErrorText className={props.errClassName}/>
+            <Input theme={props.theme} onChange={props.onInputChange}/>
+            <ErrorText errorClassName={props.errorClassName}/>
             <SearchButton onClick={props.onSearchBtnClick}/>
         </div>
     )

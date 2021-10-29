@@ -4,6 +4,6 @@
     height: auto; 
 }
 
-.IconLight {
+.Icon.light {
     filter: invert(38%) sepia(57%) saturate(430%) hue-rotate(177deg) brightness(90%) contrast(86%);
 }

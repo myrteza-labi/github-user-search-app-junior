@@ -8,7 +8,7 @@ function Stat(props) {
     return (
         <div className="Stat">
             <StatName statName={props.statName}/>
-            <StatNumber statNumber={props.statNumber}/>
+            <StatNumber theme={props.theme} statNumber={props.statNumber}/>
         </div>
     )
 }

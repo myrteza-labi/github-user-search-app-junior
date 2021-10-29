@@ -10,11 +10,11 @@
     opacity: 0.8; 
 }
 
-.InputDark {
+.Input.dark {
     color: var(--dark-font-color); 
 }
 
-.InputLight {
+.Input.light {
     color: var(--light-font-color); 
 }
 
@@ -27,11 +27,11 @@
     opacity: 0.8; 
 }
 
-.InputDark::placeholder {
+.Input.dark::placeholder {
     color: var(--dark-font-color); 
 }
 
-.InputLight::placeholder {
+.Input.light::placeholder {
     color: var(--light-font-color); 
 }
 

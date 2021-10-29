@@ -4,7 +4,7 @@ import './Pseudo.css';
 
 function Pseudo(props) {
     return (
-        <h2 className="Pseudo">{props.name}</h2>
+        <h2 className={"Pseudo " + props.theme }>{props.name}</h2>
     )
 }
 

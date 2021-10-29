@@ -10,14 +10,14 @@
     padding: 0 15px;
 }
 
-.StatsBoxDark {
+.StatsBox.light {
+    background-color: var(--light-app-bg-color); 
+}
+
+.StatsBox.dark {
     background-color: var(--dark-app-bg-color); 
 }
 
-
-.StatsBoxLight {
-    background-color: var(--light-app-bg-color); 
-}
 
 /* tablet style  */
 @media screen and (min-width: 768px){

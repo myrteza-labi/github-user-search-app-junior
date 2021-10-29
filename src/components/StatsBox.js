@@ -11,10 +11,10 @@ function StatsBox(props) {
     const following = props.following; 
 
     return (
-        <section className="StatsBox StatsBoxLight">
-            <Stat statName="Repos" statNumber={repo}/>
-            <Stat statName="Followers" statNumber={followers}/>
-            <Stat statName="following" statNumber={following}/>
+        <section className={"StatsBox " + props.theme }>
+            <Stat theme={props.theme} statName="Repos" statNumber={repo}/>
+            <Stat theme={props.theme} statName="Followers" statNumber={followers}/>
+            <Stat theme={props.theme} statName="following" statNumber={following}/>
         </section>
     )
 }
