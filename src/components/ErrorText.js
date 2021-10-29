@@ -1,9 +1,9 @@
 import React from 'react'
 import './ErrorText.css'; 
 
-function ErrorText() {
+function ErrorText(props) {
     return (
-        <p className="ErrorText">
+        <p className={props.className}>
             No result
         </p>
     )

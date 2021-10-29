@@ -11,7 +11,7 @@ function SearchBox(props) {
         <div className="Searchbox SearchboxLight">
             <SearchLogo/>
             <Input onChange={props.onInputChange}/>
-            <ErrorText/>
+            <ErrorText className={props.errClassName}/>
             <SearchButton onClick={props.onSearchBtnClick}/>
         </div>
     )
