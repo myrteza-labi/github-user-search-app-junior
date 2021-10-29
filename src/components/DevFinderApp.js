@@ -5,12 +5,15 @@ import SearchBox from './SearchBox';
 import ProfileBox from './ProfileBox'; 
 import errAvatar from '../images/errorAvatar.jpeg'; 
 
-
+/*  dont put your hands here x)   */
 
 class DevFinderApp extends React.Component{
     constructor(props){
         super(props); 
         this.state={
+
+            errorText : "ErrorText", 
+
             data : "pas de données", 
             status : null, 
             inputvalue: null, 
@@ -49,6 +52,9 @@ class DevFinderApp extends React.Component{
         this.handleSearchBtnClick = this.handleSearchBtnClick.bind(this); 
 
         this.setErrorState = this.setErrorState.bind(this); 
+
+        this.setCorrectState = this.setCorrectState.bind(this); 
+
 
 
 
@@ -123,7 +129,7 @@ class DevFinderApp extends React.Component{
         this.getDate(); 
      }
 
-     
+    /* 
 
     FetchData(){
         let user = this.state.inputvalue; 
@@ -139,6 +145,55 @@ class DevFinderApp extends React.Component{
         })
     }
 
+    */
+
+    setCorrectState(){
+        this.setState({
+            errorText: "ErrorText",
+        })
+    }
+
+    setErrorState(){
+        this.setState({
+            avatar : errAvatar,
+            name: "User not found", 
+            login: "error 404", 
+            date: null, 
+            repo: null, 
+            followers: null, 
+            following: null, 
+            location: null, 
+            twitter: null, 
+            github: null, 
+            company: null, 
+
+            errorText: "ErrorTextActive",
+
+        })
+    }
+
+    FetchData(){
+        let user = this.state.inputvalue; 
+
+        fetch("https://api.github.com/users/" + user).then(response => {
+            if(response.ok){
+                return response.json()
+            }
+            else {
+                throw new Error('Something went wrong')
+            }
+        })
+        .then(data => 
+        {            
+            this.setState({
+                data : data, 
+            }, ()=> this.setAllProfile(), this.setCorrectState())
+        })
+        .catch((error) => {
+            this.setErrorState(); 
+          });
+    }
+    
 
 
      handleInputChange(e){
@@ -241,11 +296,7 @@ class DevFinderApp extends React.Component{
         }) 
     }
 
-    setErrorState(){
-        this.setState({
-            avatar : errAvatar,
-        })
-    }
+    
 
 
 
@@ -256,7 +307,8 @@ class DevFinderApp extends React.Component{
 
                 <Header />
                 <SearchBox  onInputChange={this.handleInputChange}
-                            onSearchBtnClick={this.handleSearchBtnClick}/>
+                            onSearchBtnClick={this.handleSearchBtnClick}
+                            errClassName={this.state.errorText}/>
 
                 <ProfileBox name={this.state.name}
                             login={this.state.login}

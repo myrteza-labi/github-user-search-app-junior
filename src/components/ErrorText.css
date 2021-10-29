@@ -1,12 +1,13 @@
 .ErrorText {
-    min-width: 70px; 
-    font-size: 12px; 
-    color: #f74646; 
-    text-align: center; 
+    display: none; 
 }
 
-.ErrorTextRemove {
-    display: none; 
+.ErrorTextActive {
+    display: block; 
+    color: #f74646; 
+    min-width: 70px; 
+    font-size: 12px; 
+    text-align: center; 
 }
 
 
