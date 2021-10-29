@@ -66,6 +66,7 @@ class DevFinderApp extends React.Component{
         this.getLogin(); 
         this.getDate(); 
 
+        console.log(this.state.website)
         console.log(this.state.repo)
 
 
@@ -101,6 +102,7 @@ class DevFinderApp extends React.Component{
             login : login, 
         })
     }
+
 
     getAvatart(){
         let avatar = this.state.data.avatar_url; 
@@ -207,7 +209,13 @@ class DevFinderApp extends React.Component{
                             bio={this.state.bio}
                             repo={this.state.repo}
                             followers={this.state.followers}
-                            following={this.state.following}/>
+                            following={this.state.following}
+                            avatarSrc={this.state.avatar}
+                            AvatartAlt={this.state.name}
+                            location={this.state.location}
+                            website={this.state.github}
+                            twitter={this.state.twitter}
+                            company={this.state.company}/>
             </div>
         )
     }

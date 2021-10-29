@@ -13,10 +13,15 @@ function ProfileBox(props) {
     const follorwers = props.follorwers; 
     const following = props.following; 
 
+    const location = props.location; 
+    const website = props.website; 
+    const twitter = props.twitter; 
+    const company = props.company; 
+
     return (
         <section className="ProfileBox ProfileBoxLight">
-             <ProfilePicture    src={"https://i.pinimg.com/474x/11/d3/f2/11d3f2cb55ffbc652249f38d89fa2857--read-naruto-manga-anime-manga.jpg"}
-                                alt={"icon de Naruto"}/>
+             <ProfilePicture    src={props.avatarSrc}
+                                alt={props.AvatartAlt}/>
 
             <div className="profileBoxMainCtn">
 
@@ -29,7 +34,10 @@ function ProfileBox(props) {
                             followers={props.followers} 
                             following={props.following}/>
 
-                <Footer />
+                <Footer location={props.location}
+                        website={props.website}
+                        twitter={props.twitter}
+                        company={props.company}/>
             </div>
         </section>
     )

@@ -1,7 +1,6 @@
 <!--  README REACT JS   -->
 
 
-<!--   Finir le footer    -->
 
 
 # Getting Started with Create React App
