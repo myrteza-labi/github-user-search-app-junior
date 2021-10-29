@@ -141,24 +141,6 @@ class DevFinderApp extends React.Component{
         this.getDate(); 
      }
 
-    /* 
-
-    FetchData(){
-        let user = this.state.inputvalue; 
-
-        fetch("https://api.github.com/users/" + user)
-        .then(response => response.json())
-
-        .then(data => 
-        {            
-            this.setState({
-                data : data, 
-            }, ()=> this.setAllProfile())
-        })
-    }
-
-    */
-
     setCorrectState(){
         this.setState({
             errorText: "ErrorText",
@@ -204,7 +186,7 @@ class DevFinderApp extends React.Component{
                 data : data, 
             }, ()=> this.setAllProfile(), this.setCorrectState())
         })
-        .catch((error) => {
+        .catch(() => {
             this.setErrorState(); 
           });
     }
